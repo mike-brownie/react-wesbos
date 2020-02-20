@@ -7,12 +7,9 @@ class MyApp extends App {
 
         return (
             <Container>
-               <p> I'm an app containter. </p>
-               
                <Page>
                  <Component />    
                </Page>
-                
             </Container>
         )
     }
