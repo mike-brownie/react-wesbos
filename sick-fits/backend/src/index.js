@@ -1,19 +1,17 @@
-require('dotenv').config({ path: '.env' });
-const createServer = require('./createServer.js');
+require('dotenv').config({ path: 'variables.env' });
+const createServer = require('./createServer');
 const db = require('./db');
 
 const server = createServer();
 
-// Action item: cookies from JWT via express middleware
-// Action item: populate current user via express middleware
+// reminder - deploy express middleware cookies 
+// reminder - deploy express middleware current user 
 
-server.start(
-    {
-        cors: {
-            credentials: true, 
-            origin: process.env.FRONTEND_URL
-        }
-    }, 
-    dets => {console.log(`¡Server running on port https://localhost:${dets.port}!`);
+server.start({
+    cors: {
+        credentials: true, 
+        origin: process.env.FRONTEND_URL,
     }
-);
+},
+ dets => { console.log(`¡Server is running on port http:/localhost/:${dets.port}!`)
+})
