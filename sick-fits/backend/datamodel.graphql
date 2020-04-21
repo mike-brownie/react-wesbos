@@ -1,6 +1,7 @@
 type User {
   id: ID! @id
   name: String!
+  email: String!
 }
 
 type Item {
@@ -9,7 +10,7 @@ type Item {
   description: String!
   image: String
   largeImage: String
-  price: Int! 
+  price: Int! # in cents
   createdAt: DateTime! @createdAt
   updatedAt: DateTime! @updatedAt
   # user: User!
